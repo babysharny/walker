@@ -1,0 +1,16 @@
+<div class="walker">
+  <div my-customer></div>
+  <button
+    ng-if="prev.length > 0"
+    ng-click="goBack()"><</button>
+  <h1>{{curr.value}}</h1>
+  <ui>
+    <li ng-repeat="node in curr.nodes track by $index"
+        ng-click="selectNode(node)">
+      <a href="">{{node.value}}</a>
+    </li>
+  </ui>
+  <br>
+  <h2>current tree</h2>
+  <pre>{{curr | json}}</pre>
+</div>
